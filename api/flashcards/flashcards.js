@@ -9,6 +9,8 @@ const badValidationMsg = {msg:"Please make sure to provide correct subjet or  nu
 router.post('/',async (req,res)=>
 {
 
+
+    res.header("Access-Control-Allow-Origin", "*");
     const subject = req.query.subject
     const nbr =  req.query.nbr
  

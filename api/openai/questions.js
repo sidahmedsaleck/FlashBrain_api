@@ -16,13 +16,13 @@ async function ask(subject ,nbr)
     const res = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: 
-        `I' am making flashcards for my lesson. I want you to help me create ${nbr} flashcards questions about: ${subject}.
-        your response should be all questions separated only by newline and with  numbers like this:
+        `I' am making flashcards for my lesson. I want you to give me exacly ${nbr} question about: ${subject}.
+        your response should be exactly ${nbr} question separated only by newline and with number like this:
         1*question one here?
         2*question two here?
         if the question is harmful or dont make sense just return the phrase: 1*No Question.`,
         max_tokens:400,
-        temperature:0.30,
+        temperature:0.45,
     });
         
     return  res
