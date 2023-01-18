@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
     res.status(201).send(`<h1>Welcome to FlashBrain.ai API<h1>`)
 })
 
+app.all('*',()=>{
+    res.status(404).send(`<h1>Sorry,you request is incorrect<h1>`)
+})
 
 
 
